@@ -46,7 +46,7 @@ typedef void(^ONEWebImageDownloaderProgressBlock)(NSInteger receivedSize, NSInte
 
 typedef void(^ONEWebImageDownloaderCompletedBlock)(UIImage *image, NSData *data, NSError *error, BOOL finished);
 
-typedef void(^ONEWebImageDownloaderHeadersFilterBlock)(NSURL *url, NSDictionary *headers);
+typedef NSDictionary *(^ONEWebImageDownloaderHeadersFilterBlock)(NSURL *url, NSDictionary *headers);
 
 @interface ONEWebImageDownloader : NSObject
 
@@ -55,6 +55,8 @@ typedef void(^ONEWebImageDownloaderHeadersFilterBlock)(NSURL *url, NSDictionary 
 @property (assign, nonatomic) NSInteger maxConcurrentDownloads;
 
 @property (readonly, nonatomic) NSUInteger currentDownloadCount;
+
+@property (assign, nonatomic) NSTimeInterval downloadTimeout;
 
 @property (assign, nonatomic) ONEWebImageDownloaderExecutionOrder executionOrder;
 
