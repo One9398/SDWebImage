@@ -8,4 +8,9 @@
 
 #import "ONEWebImageCompat.h"
 
+inline UIImage *ONEScaleImageKey(NSString *key, UIImage *image) {
+	
+	return nil;
+}
+
 NSString *const ONEWebImageErrorDomain = @"ONEWebImageErrorDomain";
