@@ -28,6 +28,8 @@ typedef void(^ONEWebImageCalcuateSzieBlock)(NSUInteger flieCount, NSUInteger tot
 
 @property (assign, nonatomic) BOOL shouldDecompressImages;
 
+@property (assign, nonatomic) BOOL shouldCacheImagesInMemory;
+
 @property (assign, nonatomic) BOOL shouldDisbaleiCloud;
 
 @property (assign, nonatomic) NSUInteger maxMemoryCost;
